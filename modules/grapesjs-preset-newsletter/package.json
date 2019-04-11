@@ -1,0 +1,70 @@
+{
+  "_from": "grapesjs-preset-newsletter",
+  "_id": "grapesjs-preset-newsletter@0.2.20",
+  "_inBundle": false,
+  "_integrity": "sha512-rffUeuznf9Saig+kIUddmGfhWwbLjxdaqAYf6Hoge4b0sfT8knOS4mQXJBdRsSROfzuRhFe6ybRHm4yC32lHxA==",
+  "_location": "/grapesjs-preset-newsletter",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "grapesjs-preset-newsletter",
+    "name": "grapesjs-preset-newsletter",
+    "escapedName": "grapesjs-preset-newsletter",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/grapesjs-preset-newsletter/-/grapesjs-preset-newsletter-0.2.20.tgz",
+  "_shasum": "d6b83c1f13e0e95bd87dddcc01c6095a19852c65",
+  "_spec": "grapesjs-preset-newsletter",
+  "_where": "C:\\Users\\Roman\\Desktop\\Workplace\\Projects\\javascript\\react\\grapesjs",
+  "author": {
+    "name": "Artur Arseniev"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "juice": "^4.1.1"
+  },
+  "deprecated": false,
+  "description": "GrapesJS preset configuration for the newsletter editor",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "eslint": "^4.1.1",
+    "jest": "^23.1.0",
+    "node-sass": "^4.5.3",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "jest": {
+    "modulePaths": [
+      "./src"
+    ]
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "newsletter",
+    "preset"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/grapesjs-preset-newsletter.min.js",
+  "name": "grapesjs-preset-newsletter",
+  "scripts": {
+    "build": "cross-env WEBPACK_ENV=prod && npm run v:patch && webpack && npm run build:css",
+    "build:css": "node-sass src/style/main.scss dist/grapesjs-preset-newsletter.css",
+    "lint": "eslint src",
+    "start": "cross-env WEBPACK_ENV=dev ./node_modules/.bin/webpack-dev-server --progress --colors & npm run build:css -- -w",
+    "test": "jest",
+    "v:patch": "npm version --no-git-tag-version patch"
+  },
+  "version": "0.2.20"
+}
